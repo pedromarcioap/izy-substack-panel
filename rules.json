@@ -3,10 +3,10 @@
     "id": 1,
     "priority": 1,
     "action": {
-      "type": "removeHeaders",
+      "type": "modifyHeaders",
       "responseHeaders": [
-        { "header": "x-frame-options" },
-        { "header": "content-security-policy" }
+        { "header": "x-frame-options", "operation": "remove" },
+        { "header": "content-security-policy", "operation": "remove" }
       ]
     },
     "condition": {
