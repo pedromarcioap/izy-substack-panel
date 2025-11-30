@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Substack Focus Sidebar",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Abre o feed do Substack na barra lateral focando apenas no conteúdo principal.",
   "permissions": [
     "sidePanel",
@@ -12,12 +12,7 @@
     "*://*.substack.com/*"
   ],
   "action": {
-    "default_title": "Abrir Substack Lateral",
-    "default_icon": {
-      "16": "images/icon-16.png",
-      "48": "images/icon-48.png",
-      "128": "images/icon-128.png"
-    }
+    "default_title": "Abrir Substack Lateral"
   },
   "background": {
     "service_worker": "background.js"
