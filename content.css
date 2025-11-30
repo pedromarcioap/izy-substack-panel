@@ -1,0 +1,63 @@
+/* Esconde todos os elementos do corpo por padrão para limpar a tela */
+body > * {
+    display: none !important;
+}
+
+/* Garante que o container raiz (root) do React/App esteja visível */
+#root, #main, .main {
+    display: block !important;
+}
+
+/* Esconde especificamente barras laterais, cabeçalhos e rodapés do Substack */
+header, 
+nav, 
+footer,
+.sidebar, 
+.top-bar,
+div[class*="header"], 
+div[class*="sidebar"],
+div[class*="right-rail"],
+div[class*="left-rail"] {
+    display: none !important;
+}
+
+/* 
+   SELETOR MÁGICO 
+   Alvo: div.pencraft.pc-display-flex.pc-paddingTop-16.pc-justifyContent-center 
+   
+   Usamos !important para sobrescrever o estilo original e forçar
+   este elemento a ocupar a tela inteira.
+*/
+div.pencraft.pc-display-flex.pc-justifyContent-center.pc-paddingTop-16 {
+    /* Torna este elemento visível */
+    display: flex !important;
+    
+    /* Posiciona ele fixo sobre todo o resto */
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    
+    /* Configuração de fundo e scroll */
+    background-color: #ffffff !important;
+    overflow-y: auto !important;
+    z-index: 2147483647 !important; /* Z-index máximo */
+    
+    /* Ajustes estéticos para a sidebar */
+    padding: 10px !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+}
+
+/* Garante que os filhos diretos do container alvo sejam visíveis e ocupem a largura correta */
+div.pencraft.pc-display-flex.pc-justifyContent-center.pc-paddingTop-16 > div {
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+/* Ajustes para imagens e texto dentro da sidebar para não quebrar */
+img {
+    max-width: 100% !important;
+    height: auto !important;
+}

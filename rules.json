@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "removeHeaders",
+      "responseHeaders": [
+        { "header": "x-frame-options" },
+        { "header": "content-security-policy" }
+      ]
+    },
+    "condition": {
+      "urlFilter": "substack.com",
+      "resourceTypes": ["sub_frame"]
+    }
+  }
+]

@@ -1,0 +1,1 @@
+Crie 3 arquivos PNG nesta pasta chamados icon16.png, icon48.png e icon128.png. Eles podem ser simples quadrados na cor laranja (#FF6719) para combinar com o Substack.
