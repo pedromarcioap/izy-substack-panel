@@ -1,20 +1,29 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Substack Focus Sidebar (Chrome Extension)
 
-# Run and deploy your AI Studio app
+Uma extensão para Google Chrome que permite abrir o Substack na barra lateral (Side Panel) com uma visualização limpa e focada no feed de leitura.
 
-This contains everything you need to run your app locally.
+## 🚀 Funcionalidades
 
-View your app in AI Studio: https://ai.studio/apps/drive/1cdPYzpbbOTWKSSa0h3NPYVKC7boQVqM4
+- **Integração com Side Panel**: Abre o Substack diretamente na barra lateral do navegador.
+- **Modo Foco**: Remove automaticamente cabeçalhos, rodapés e barras laterais do Substack, mantendo apenas o conteúdo principal.
+- **Bypass de X-Frame-Options**: Utiliza regras de rede declarativas para permitir o carregamento do Substack em iframes.
 
-## Run Locally
+## 🛠️ Instalação (Modo Desenvolvedor)
 
-**Prerequisites:**  Node.js
+1. Clone este repositório ou baixe os arquivos.
+2. Abra o Chrome e acesse `chrome://extensions/`.
+3. Ative o **Modo do desenvolvedor** no canto superior direito.
+4. Clique em **Carregar sem compactação** (Load unpacked).
+5. Selecione a pasta raiz deste projeto.
 
+## 📂 Estrutura do Projeto
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+- `manifest.json`: Configurações da extensão (Manifest V3).
+- `background.js`: Gerencia a abertura do painel lateral.
+- `rules.json`: Regras para permitir o carregamento do site em iframe.
+- `popup/`: Contém o HTML/JS/CSS do painel lateral.
+- `scripts/`: Scripts injetados na página (Content Scripts).
+
+## 🤝 Contribuição
+
+Sinta-se à vontade para abrir Issues ou Pull Requests para melhorar a funcionalidade de isolamento de elementos CSS, visto que o Substack atualiza suas classes frequentemente.
